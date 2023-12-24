@@ -6,7 +6,7 @@ Gemini AI CLI is a sophisticated command line interface that empowers you to sea
 
 ---
 
-# Embark on a Journey of Creation with Gemini AI CLI:
+## Embark on a Journey of Creation with Gemini AI CLI:
 ---
 
 1. **Text Prompting with Gemini-Pro:** Engage in natural language conversations with Gemini-Pro, Gemini AI's advanced text-based model. Simply type in your prompts, and witness the model's remarkable ability to generate coherent, informative, and engaging responses.
@@ -15,7 +15,7 @@ Gemini AI CLI is a sophisticated command line interface that empowers you to sea
 
 ---
 
-# Getting Started with Gemini AI CLI:
+## Getting Started with Gemini AI CLI:
 ---
 
 1. **Embrace the Simplicity of Installation:** Dive into the world of Gemini AI CLI with a simple cloning of the repository.
@@ -35,14 +35,14 @@ go run main.go
 
 ---
 
-# Embracing Open-Source:
+## Embracing Open-Source:
 ---
 
 Gemini AI CLI proudly stands as an open-source project, embracing the spirit of collaboration and innovation. Licensed under the permissive MIT license, it invites you to delve into its code, contribute to its growth, and make it your own.
 
 ---
 
-# Dive into the Documentation:
+## Dive into the Documentation:
 ---
 
 Explore the comprehensive documentation for Gemini AI CLI to unlock its full potential. Discover detailed guides, usage examples, and advanced topics that will empower you to harness the true power of Gemini AI from the command line.
