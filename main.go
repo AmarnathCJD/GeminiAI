@@ -31,7 +31,9 @@ func sendPromt(prompt string) {
 
 	defer res.Body.Close()
 
-	var GeminiResponse GeminiResponse
+	var GeminiResponse struct {
+		Candidates []Candidate `json:"candidates"`
+	}
 	if err = json.NewDecoder(res.Body).Decode(&GeminiResponse); err != nil {
 		panic(err)
 	}
@@ -40,7 +42,7 @@ func sendPromt(prompt string) {
 
 	for _, candidate := range GeminiResponse.Candidates {
 		for _, part := range candidate.Content.Parts {
-			print(part.Text)
+			print(part.(map[string]interface{})["text"].(string))
 		}
 	}
 	print("\n")
@@ -84,7 +86,9 @@ func sendImagePrompt(prompt string, file string) {
 	}
 
 	defer res.Body.Close()
-	var GeminiResponse GeminiResponse
+	var GeminiResponse struct {
+		Candidates []Candidate `json:"candidates"`
+	}
 	if err = json.NewDecoder(res.Body).Decode(&GeminiResponse); err != nil {
 		panic(err)
 	}
@@ -93,7 +97,7 @@ func sendImagePrompt(prompt string, file string) {
 
 	for _, candidate := range GeminiResponse.Candidates {
 		for _, part := range candidate.Content.Parts {
-			print(part.Text)
+			print(part.(map[string]interface{})["text"].(string))
 		}
 	}
 	print("\n")
@@ -197,4 +201,10 @@ func getImageDimensions(path string) (int, int) {
 	}
 
 	return image.Height, image.Width
+}
+
+type Candidate struct {
+	Content struct {
+		Parts []interface{} `json:"parts"`
+	}
 }
